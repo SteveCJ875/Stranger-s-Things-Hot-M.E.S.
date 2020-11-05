@@ -1,0 +1,24 @@
+{
+  "name": "Strangers_Things",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SteveCJ875/Stranger-s-Things-Hot-M.E.S..git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SteveCJ875/Stranger-s-Things-Hot-M.E.S./issues"
+  },
+  "homepage": "https://github.com/SteveCJ875/Stranger-s-Things-Hot-M.E.S.#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "axios": "^0.21.0"
+  }
+}
