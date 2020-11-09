@@ -20,6 +20,7 @@
   "homepage": "https://github.com/SteveCJ875/Stranger-s-Things-Hot-M.E.S.#readme",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "axios": "^0.21.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
