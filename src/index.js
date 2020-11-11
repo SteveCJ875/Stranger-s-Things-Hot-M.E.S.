@@ -4,6 +4,8 @@ import HeaderComponent from "./components/HeaderComponent.js";
 import Button from "@material-ui/core/Button";
 import AppBar from "@material-ui/core/AppBar";
 import CommentComponent from './components/SignUpForm.js'
+import CreatePostComponent from "./components/CreatePostComponent"
+import PostList from "./components/PostList"
 
 import { getToken, clearToken, hitAPI } from "./api";
 
@@ -14,6 +16,10 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn, getUserObj] = useState(!!getToken());
   const [postList, setPostList, setUserObj] = useState([]);
   const [wantsToReply, setReply] = useState("") 
+
+  function addNewPost (newPost) {
+      setPostList([newPost, ...postList]);
+  }
 
   useEffect(() => {
     hitAPI("GET", "/posts")
@@ -28,7 +34,7 @@ const App = () => {
   return (
     <div className="app">
       <HeaderComponent />
-
+      
       {isLoggedIn ? (
         <>
           <h1>Thanks for logging in!</h1>
@@ -44,72 +50,10 @@ const App = () => {
       ) : (
         <Auth setIsLoggedIn={setIsLoggedIn} />
       )}
-      {postList.map((post, idx) => {
-         
-        return (
-          
-          <div
-            className="post"
-            key={idx}
-            style={{
-              border: post.isAuthor ? "5px solid gold" : "1px solid brown",
-            }}
-          >
-            <h5>
-              {post.title} ({post.location})
-            </h5>
-            <p>{post.description}</p>
-            <div>
-              {wantsToReply === post._id ? <CommentComponent 
-                  wantsToReply={wantsToReply}
-                  setReply={setReply}
-              /> : null}
-              </div>
-            <div>
-              {post.isAuthor ? (
-                <Button
-                  variant="contained"
-                  color="primary"
-                  id={post._id}
-                  onClick={() => {
-                    console.log("hey", post._id);
-                    hitAPI("DELETE", `/posts/${ post._id }`)
-                    console.log(post._id);
-
-                  }}
-                  
-                >
-                  {" "}
-                  DELETE
-                </Button>
-              ) : (
-                <Button
-                  variant="contained"
-                  style={{ background: "#B1B9B9" }}
-                  //wantsToReply=(false)
-                  
-                  onClick={async (event) => {
-                      console.log(post._id)
-                    setReply(post._id)
-                    console.log(wantsToReply, "wants to reply")
-                  }}
-                >
-                  reply
-                </Button>
-              
-
-              )}
-              {/* <div>
-              {wantsToReply ?  <CommentComponent 
-                  wantsToReply={wantsToReply}
-                  setReply={setReply}
-              /> : null}
-              </div> */}
-              
-            </div>
-          </div>
-        );
-      })}
+        <PostList postList={postList} />
+      
+       <CreatePostComponent addNewPost={addNewPost}/> 
+      
     </div>
   );
 };
