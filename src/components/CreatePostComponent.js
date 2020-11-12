@@ -40,8 +40,8 @@ return <div>
 
               }
 
-          try{
-          const result = hitAPI('POST', '/posts', payload)
+          try {
+          const result = await hitAPI('POST', '/posts', payload)
           addNewPost(result.post)
           console.log(result);
           } catch (error){

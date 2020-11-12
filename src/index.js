@@ -50,7 +50,9 @@ const App = () => {
       ) : (
         <Auth setIsLoggedIn={setIsLoggedIn} />
       )}
-        <PostList postList={postList} />
+        <PostList 
+        postList={postList}
+        setPostList={setPostList} />
       
        <CreatePostComponent addNewPost={addNewPost}/> 
       

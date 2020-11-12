@@ -2,11 +2,12 @@ import { PostAddOutlined } from "@material-ui/icons";
 import React, {useState} from "react";
 import {Button} from "@material-ui/core"
 import CommentComponent from "./SignUpForm"
+import {hitAPI} from "../api"
 
 const PostList = (props) => {
     const [wantsToReply, setReply] = useState("") 
-    const {postList} = props;
-
+    const {postList, setPostList} = props;
+    
     return <div className="post-list">
 
     <h3> Posts Are Here!</h3>
