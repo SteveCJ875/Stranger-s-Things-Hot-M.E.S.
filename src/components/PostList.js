@@ -1,12 +1,14 @@
 import { PostAddOutlined } from "@material-ui/icons";
 import React, {useState} from "react";
 import {Button} from "@material-ui/core"
-import CommentComponent from "./SignUpForm"
+import CommentComponent from "./CommentComponent"
 import {hitAPI} from "../api"
+import MessageComponent from "./MessagesComponent"
 
 const PostList = (props) => {
     const [wantsToReply, setReply] = useState("") 
     const {postList, setPostList} = props;
+    const {messages, setMessages} = props;
     
     return <div className="post-list">
 
@@ -14,20 +16,24 @@ const PostList = (props) => {
     {postList.map((post, idx) => {
          
          return (
-           
+        
            <div
              className="post"
              key={idx}
              style={{
                border: post.isAuthor ? "5px solid gold" : "1px solid brown",
+               overflow: "scroll"
+            
              }}
            >
              <h5>
                {post.title} ({post.location})
+               {console.log(post.messages.content)}
              </h5>
              <p>{post.description}</p>
              <div>
-               {wantsToReply === post._id ? <CommentComponent 
+             {wantsToReply === post._id ? <CommentComponent 
+             
                    wantsToReply={wantsToReply}
                    setReply={setReply}
                /> : null}
@@ -74,7 +80,9 @@ const PostList = (props) => {
                
  
                )}
-         
+         <MessageComponent messageList={post.messages}
+           
+         />
              </div>
          
            </div>
