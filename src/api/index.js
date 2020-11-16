@@ -76,4 +76,3 @@ export const hitAPI = async (method, endpoint, bodyObj) => {
 
   return data;
 };
-

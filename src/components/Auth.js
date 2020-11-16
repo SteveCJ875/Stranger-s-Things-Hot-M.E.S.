@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from '@material-ui/core/Button';
 import { createMuiTheme } from '@material-ui/core/styles'
 //import TextField from '@material-ui/core/TextField'
+import {Container} from "@material-ui/core"
 
 import { auth } from "../api";
 import { TextField } from "@material-ui/core";
@@ -14,6 +15,7 @@ const Auth = (props) => {
   const [errorMessage, setErrorMessage] = useState(null);
 
   return (
+      <Container fixed >
     <form onSubmit={(event) => event.preventDefault()}>
       <h3>Register or Log In</h3>
       {errorMessage ? <h5 className="error">{errorMessage}</h5> : null}
@@ -23,12 +25,15 @@ const Auth = (props) => {
         onChange={(event) => setUsername(event.target.value)}
         placeholder="username"
       />
+      <br></br>
       <TextField
         type="password"
         value={password}
         onChange={(event) => setPassword(event.target.value)}
         placeholder="password"
       />
+      <br></br>
+      <div>
       <Button 
       variant="contained"
       color="primary"
@@ -43,7 +48,10 @@ const Auth = (props) => {
       >
         Register
       </Button>
-      <Button
+   
+   
+      <Button variant="contained"
+      
         onClick={async (event) => {
           try {
             const result = await auth(username, password);
@@ -55,7 +63,10 @@ const Auth = (props) => {
       >
         Log In
       </Button>
+      </div>
+     
     </form>
+    </Container>
   );
 };
 
