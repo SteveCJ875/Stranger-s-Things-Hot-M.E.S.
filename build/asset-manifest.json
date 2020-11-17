@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/SteveCJ875/Stranger-s-Things-Hot-M.E.S.static/css/main.afd7172b.chunk.css",
-    "main.js": "/SteveCJ875/Stranger-s-Things-Hot-M.E.S.static/js/main.a402ec70.chunk.js",
-    "main.js.map": "/SteveCJ875/Stranger-s-Things-Hot-M.E.S.static/js/main.a402ec70.chunk.js.map",
-    "runtime-main.js": "/SteveCJ875/Stranger-s-Things-Hot-M.E.S.static/js/runtime-main.cdab17aa.js",
-    "runtime-main.js.map": "/SteveCJ875/Stranger-s-Things-Hot-M.E.S.static/js/runtime-main.cdab17aa.js.map",
-    "static/js/2.8c8b7d71.chunk.js": "/SteveCJ875/Stranger-s-Things-Hot-M.E.S.static/js/2.8c8b7d71.chunk.js",
-    "static/js/2.8c8b7d71.chunk.js.map": "/SteveCJ875/Stranger-s-Things-Hot-M.E.S.static/js/2.8c8b7d71.chunk.js.map",
-    "index.html": "/SteveCJ875/Stranger-s-Things-Hot-M.E.S.index.html",
-    "static/css/main.afd7172b.chunk.css.map": "/SteveCJ875/Stranger-s-Things-Hot-M.E.S.static/css/main.afd7172b.chunk.css.map",
-    "static/js/2.8c8b7d71.chunk.js.LICENSE.txt": "/SteveCJ875/Stranger-s-Things-Hot-M.E.S.static/js/2.8c8b7d71.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.afd7172b.chunk.css",
+    "main.js": "/static/js/main.a402ec70.chunk.js",
+    "main.js.map": "/static/js/main.a402ec70.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9963cf9d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9963cf9d.js.map",
+    "static/js/2.8c8b7d71.chunk.js": "/static/js/2.8c8b7d71.chunk.js",
+    "static/js/2.8c8b7d71.chunk.js.map": "/static/js/2.8c8b7d71.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.afd7172b.chunk.css.map": "/static/css/main.afd7172b.chunk.css.map",
+    "static/js/2.8c8b7d71.chunk.js.LICENSE.txt": "/static/js/2.8c8b7d71.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.cdab17aa.js",
+    "static/js/runtime-main.9963cf9d.js",
     "static/js/2.8c8b7d71.chunk.js",
     "static/css/main.afd7172b.chunk.css",
     "static/js/main.a402ec70.chunk.js"

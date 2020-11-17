@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/SteveCJ875/Stranger-s-Things-Hot-M.E.S./issues"
   },
-  "homepage": "https://github.com/SteveCJ875/Stranger-s-Things-Hot-M.E.S.#readme",
+
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
