@@ -3,31 +3,36 @@ import { Button } from "@material-ui/core";
 import CommentComponent from "./CommentComponent";
 import { hitAPI } from "../api";
 import MessageComponent from "./MessagesComponent";
+import './PostList.css'
 
 const PostList = (props) => {
   const [wantsToReply, setReply] = useState("");
-  const { postList, setPostList } = props;
+  const { postList, setPostList, setEditablePost } = props;
  //const {set} = props;
 
   return (
     <div  className="post-list"
-    style={{
-      display: "grid",
-      gap: "8px",
-      gridColumn: 1,
-      gridRow: 2,
-      overflowY: "scroll",
-        padding: "8px",
+    // style={{
+    //   display: "grid",
+    //   gap: "8px",
+    //   gridColumn: 1,
+    //   gridRow: 2,
+    //   overflowY: "scroll",
+    //     padding: "8px",
    
-    }}>
+    // }}
+    >
       <h3> Posts Are Here!</h3>
       {postList.map((post, idx) => {
         return (
           <div
-            className="post"
+            className="post-container"
             key={idx}
             style={{
-              border: post.isAuthor ? "5px solid gold" : "1px solid brown",
+            //   border: post.isAuthor ? "5px solid gold" : "1px solid brown",
+            border: "1.5px solid black",
+            borderRadius: "10px 10px 10px 10px",
+            borderSpacing: "40px",
               overflow: "scroll",
             }}
           >
@@ -45,7 +50,7 @@ const PostList = (props) => {
             </div>
             <div>
               {post.isAuthor ? (
-                  <div> 
+                  <div className="post-conatiner"> 
                   <Button
                   variant="contained"
                   color="primary"

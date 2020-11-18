@@ -1,0 +1,11 @@
+.search-bar {
+    width: 50%;
+    height: 20px;
+    margin: 5px;
+  }
+  
+  .post-components {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  
